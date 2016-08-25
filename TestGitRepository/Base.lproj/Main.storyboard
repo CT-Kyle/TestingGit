@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -30,12 +31,22 @@
                                     <action selector="changeTextTouchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XAI-iY-uac"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ekT-Ri-clZ">
+                                <rect key="frame" x="18" y="318" width="564" height="31"/>
+                                <connections>
+                                    <action selector="updateSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="0vC-iK-HDM"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="ekT-Ri-clZ" secondAttribute="leading" id="0f2-mb-0on"/>
                             <constraint firstItem="uxd-wy-tUx" firstAttribute="centerX" secondItem="d3M-hH-E2n" secondAttribute="centerX" id="2Zv-GD-BoG"/>
                             <constraint firstItem="d3M-hH-E2n" firstAttribute="top" secondItem="uxd-wy-tUx" secondAttribute="bottom" constant="8" symbolic="YES" id="D5t-Ls-7nG"/>
+                            <constraint firstItem="ekT-Ri-clZ" firstAttribute="centerX" secondItem="d3M-hH-E2n" secondAttribute="centerX" id="DqV-BO-v62"/>
                             <constraint firstItem="d3M-hH-E2n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jdl-i6-feu"/>
+                            <constraint firstItem="ekT-Ri-clZ" firstAttribute="top" secondItem="d3M-hH-E2n" secondAttribute="bottom" constant="8" symbolic="YES" id="Wqe-em-vu6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ekT-Ri-clZ" secondAttribute="trailing" id="Zxi-2u-Rbm"/>
                             <constraint firstItem="d3M-hH-E2n" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qPh-Xl-ffm"/>
                         </constraints>
                     </view>
@@ -45,6 +56,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="382" y="321"/>
         </scene>
     </scenes>
 </document>
