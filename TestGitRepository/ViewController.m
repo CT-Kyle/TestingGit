@@ -55,4 +55,26 @@
     [self.nameTextField resignFirstResponder];
 }
 
+- (IBAction)segmentChanged:(UISegmentedControl *)sender {
+    NSInteger idx = [sender selectedSegmentIndex];
+    
+    switch (idx) {
+        case 0:
+            self.view.backgroundColor = [UIColor whiteColor];
+            break;
+        case 1:
+            //smu red
+            self.view.backgroundColor = [UIColor colorWithRed:204/255.0 green:0 blue:0 alpha:1];
+            break;
+        case 2:
+            //smu blue
+            self.view.backgroundColor = [UIColor colorWithRed:53/255.0 green:76/255.0 blue:161/255.0 alpha:1];
+            break;
+            
+        default:
+            break;
+    }
+}
+
+
 @end
